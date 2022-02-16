@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public":"dist/indusind-cc",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/src/**",
+      "**/dist/indusind-cc/assets/cred.json"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
