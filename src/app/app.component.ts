@@ -38,13 +38,13 @@ export class AppComponent implements OnInit{
     { console.log("Checking "+this.PINCODE);
       this.FullData=this.service.isItServiceable(this.PINCODE);
       this.checkCalled=true;
-      this.Servicibiity="not servicable ";
+      this.Servicibiity="not serviceable";
       this.isServicable=false;
       for(let data of this.FullData)
       {
         if(data["PIN CODE"]==this.PINCODE)
         {
-          this.Servicibiity="servicable";
+          this.Servicibiity="serviceable";
            this.isServicable=true;
           this.addOnData=data;
           this.isInvalidPin=false;

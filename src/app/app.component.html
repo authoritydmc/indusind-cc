@@ -7,7 +7,7 @@
     <label class="c-form__buttonLabel" for="checkbox" (click)="check();">
       <button class="c-form__button" type="button" name="checkbtn" value="button" (click)="check();"> Check</button>
     </label>
-    <label class="c-form__toggle" for="checkbox" data-title="Check Servicibility" ></label>
+    <label class="c-form__toggle" for="checkbox" data-title="Check Serviceability" ></label>
   </form>
   
 
@@ -33,14 +33,26 @@
   {{pincode}}
   
 </p> -->
-<h3> All servicable city in {{addOnData.AREA}} are:</h3>
+<div *ngIf="addOnData.state_av_list.size>0">
+
+
+<h3 > All serviceable city in {{addOnData.AREA}} are:</h3>
+
 <ul *ngFor="let city of addOnData.state_av_list.values()"> 
 <li>{{city}}</li>
 
 </ul>
 </div>
+
+<div *ngIf="addOnData.state_av_list.size==0">
+
+
+  <h3> No city of  {{addOnData.AREA}} is serviceable </h3>
+  </div>
+
+</div>
 <p *ngIf="isInvalidPin"> Pincode {{PINCODE}}  is not valid ...</p>
-  <button  class="cls_btn" type="button" name="checkbtn" value="button" (click)="toggle();"> Check Again</button>
+  <button  class="cls_btn" type="button" name="checkbtn" value="button" (click)="toggle();"> Check other Pincode</button>
 
 
 
