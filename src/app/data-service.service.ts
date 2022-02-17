@@ -15,4 +15,10 @@ export class DataServiceService {
      return this.http.get<string>('assets/indusind_cc_data.json');
 
    }
+
+   getState(pincode:string):Observable<JSON[]>{
+
+    var URL='https://api.postalpincode.in/pincode/'+pincode;
+     return this.http.get<JSON[]>(URL);
+   }
 }

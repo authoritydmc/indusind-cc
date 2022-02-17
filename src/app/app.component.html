@@ -1,5 +1,47 @@
-<h1>THis is simple test</h1>
+<input class="c-checkbox" type="checkbox" id="checkbox" [checked]="toogleInput"> 
+<div class="c-formContainer" *ngIf="!checkCalled">
 
-<p>
-    {{cred}}
+  <form class="c-form"  >
+
+    <input class="c-form__input" placeholder="Pincode" type="text" pattern="^[0-9]{6}$" required maxlength="6" name="pincode" [(ngModel)]="PINCODE">
+    <label class="c-form__buttonLabel" for="checkbox" (click)="check();">
+      <button class="c-form__button" type="button" name="checkbtn" value="button" (click)="check();"> Check</button>
+    </label>
+    <label class="c-form__toggle" for="checkbox" data-title="Check Servicibiity" ></label>
+  </form>
+  
+
+  
+</div>
+
+<div class="service_data" *ngIf="checkCalled">
+<div *ngIf="!isInvalidPin" >
+  <p class="emojis" *ngIf="!isServicable">😞</p>
+  <p class="emojis" *ngIf="isServicable">😍</p>
+  <p> PinCode {{PINCODE}} is {{Servicibiity}}</p>
+
+  
+  
+<p>{{addOnData.MAIN_CITY}}</p>
+<p *ngIf="isServicable">
+ City: {{addOnData.CITY}}<br>
+ Since: {{addOnData['DATE']}}<br>
+ Area:{{addOnData['AREA']}}<br>
+
 </p>
+<!-- <p *ngFor="let pincode of addOnData.city_av_list.values()"> 
+  {{pincode}}
+  
+</p> -->
+<h3> All servicable city in {{addOnData.AREA}} are:</h3>
+<ul *ngFor="let city of addOnData.state_av_list.values()"> 
+<li>{{city}}</li>
+
+</ul>
+</div>
+<p *ngIf="isInvalidPin"> Pincode {{PINCODE}} is not valid ...</p>
+  <button  class="cls_btn" type="button" name="checkbtn" value="button" (click)="toggle();"> Check Again</button>
+
+
+
+</div>
