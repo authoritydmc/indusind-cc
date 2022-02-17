@@ -2,7 +2,13 @@
 body {
   font-size: 10px;
   font-family: Roboto, sans-serif;
-  background-color: #ff7b73;
+ 
+  background-color: #FF9A8B;
+  background-image: -webkit-linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+  background-image: -moz-linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+  background-image: -o-linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+  background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+  
   margin: 0;
   display: grid;
   height: 100vh;
@@ -16,4 +22,5 @@ body {
   margin: auto;
   align-content: center;
   text-align: center;
+  margin-top: 5%;
 }

@@ -127,7 +127,7 @@ export class AppComponent implements OnInit{
 
   toggle()
   {
-    console.log("toogling value from "+this.toogleInput);
+    // console.log("toogling value from "+this.toogleInput);
     this.PINCODE='';
     this.checkCalled=false;
     this.toogleInput=this.toogleInput?false:true;
