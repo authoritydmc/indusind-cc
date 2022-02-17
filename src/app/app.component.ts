@@ -94,6 +94,7 @@ export class AppComponent implements OnInit{
 
            this.addOnData.state_av_list=new Set();
           this.addOnData.AREA=state_name;
+          this.addOnData.CITY=postOffice.District;
            for(let data of this.FullData)
            {
              if(data["AREA"]==state_name)

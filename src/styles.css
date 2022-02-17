@@ -9,3 +9,11 @@ body {
   place-items: center;
 }
 
+.title,footer
+{
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 2.4em;
+  margin: auto;
+  align-content: center;
+  text-align: center;
+}

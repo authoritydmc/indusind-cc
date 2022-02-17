@@ -7,7 +7,7 @@
     <label class="c-form__buttonLabel" for="checkbox" (click)="check();">
       <button class="c-form__button" type="button" name="checkbtn" value="button" (click)="check();"> Check</button>
     </label>
-    <label class="c-form__toggle" for="checkbox" data-title="Check Servicibiity" ></label>
+    <label class="c-form__toggle" for="checkbox" data-title="Check Servicibility" ></label>
   </form>
   
 
@@ -18,7 +18,7 @@
 <div *ngIf="!isInvalidPin" >
   <p class="emojis" *ngIf="!isServicable">😞</p>
   <p class="emojis" *ngIf="isServicable">😍</p>
-  <p> PinCode {{PINCODE}} is {{Servicibiity}}</p>
+  <p> Pincode {{PINCODE}} of {{addOnData.CITY}} is {{Servicibiity}}</p>
 
   
   
@@ -39,7 +39,7 @@
 
 </ul>
 </div>
-<p *ngIf="isInvalidPin"> Pincode {{PINCODE}} is not valid ...</p>
+<p *ngIf="isInvalidPin"> Pincode {{PINCODE}}  is not valid ...</p>
   <button  class="cls_btn" type="button" name="checkbtn" value="button" (click)="toggle();"> Check Again</button>
 
 
